@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 指定room命名空间 -->
+<mapper namespace="org.example.HappyDay_Hotel.mapper.UserMapper_room">
+
+  <!-- 对数据进行插入操作 -->
+  <insert id="insert" parameterType="org.example.HappyDay_Hotel.entity.UserEntity_room">
+    INSERT INTO room (roomid, roomtype, roomprice, roomstatus,roommember,roomarea)
+    VALUES (#{roomid}, #{roomtype}, #{roomprice}, #{roomstatus},#{roommember},#{roomarea})
+  </insert>
+
+  <delete id="delete" parameterType="org.example.HappyDay_Hotel.entity.UserEntity_room">
+    DELETE FROM room WHERE roomid = #{roomid}
+  </delete>
+
+  <update id="update" parameterType="org.example.HappyDay_Hotel.entity.UserEntity_room">
+    UPDATE room
+    SET roomtype = #{roomtype}, roomprice = #{roomprice}, roomstatus = #{roomstatus} ,roommember = #{roommember},roomarea = #{roomarea}
+    WHERE roomid = #{roomid}
+  </update>
+
+  <select id="select" parameterType="org.example.HappyDay_Hotel.entity.UserEntity_room" resultType="org.example.HappyDay_Hotel.entity.UserEntity_room">
+    SELECT * FROM room WHERE roomid = #{roomid};
+  </select>
+
+</mapper>
+
+

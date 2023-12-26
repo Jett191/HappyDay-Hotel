@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 指定order命名空间 -->
+<mapper namespace="org.example.HappyDay_Hotel.mapper.UserMapper_order">
+
+  <!-- 对数据进行插入操作 -->
+  <insert id="insert" parameterType="org.example.HappyDay_Hotel.entity.UserEntity_order">
+    INSERT INTO `order` (orderid,orderstart,orderend,clientid,roomid )
+    VALUES (#{orderid},#{orderstart},#{orderend},#{clientid},#{roomid})
+  </insert>
+
+  <delete id="delete" parameterType="org.example.HappyDay_Hotel.entity.UserEntity_order">
+    DELETE FROM `order` WHERE orderid = #{orderid}
+  </delete>
+
+  <update id="update" parameterType="org.example.HappyDay_Hotel.entity.UserEntity_order">
+    UPDATE `order`
+    SET orderid = #{orderclientid}, orderstart = #{orderstart}, orderend = #{orderend}, clientid = #{clientid}, roomid = #{roomid}
+    WHERE orderid = #{orderid}
+  </update>
+
+  <select id="select" parameterType="org.example.HappyDay_Hotel.entity.UserEntity_order" resultType="org.example.HappyDay_Hotel.entity.UserEntity_order">
+    SELECT * FROM `order` WHERE orderid = #{orderid};
+  </select>
+
+</mapper>
+
+

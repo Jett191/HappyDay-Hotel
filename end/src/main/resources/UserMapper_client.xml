@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 指定client命名空间 -->
+<mapper namespace="org.example.HappyDay_Hotel.mapper.UserMapper_client">
+
+  <!-- 对数据进行插入操作 -->
+  <insert id="insert" parameterType="org.example.HappyDay_Hotel.entity.UserEntity_client">
+    INSERT INTO client (clientid, clientname, clientcard, clientphone, clientpassword)
+    VALUES (#{clientid}, #{clientname}, #{clientcard}, #{clientphone}, #{clientpassword})
+  </insert>
+
+  <delete id="delete" parameterType="org.example.HappyDay_Hotel.entity.UserEntity_client">
+    DELETE FROM client WHERE clientid = #{clientid}
+  </delete>
+
+  <update id="update" parameterType="org.example.HappyDay_Hotel.entity.UserEntity_client">
+    UPDATE client
+    SET clientname = #{clientname}, clientcard = #{clientcard}, clientphone = #{clientphone}, clientpassword = #{clientpassword}
+    WHERE clientid = #{clientid}
+  </update>
+
+  <select id="select" parameterType="org.example.HappyDay_Hotel.entity.UserEntity_client" resultType="org.example.HappyDay_Hotel.entity.UserEntity_client">
+    SELECT * FROM client WHERE clientid = #{clientid};
+  </select>
+
+</mapper>
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 指定manager命名空间 -->
+<mapper namespace="org.example.HappyDay_Hotel.mapper.UserMapper_manager">
+
+  <!-- 对数据进行插入操作 -->
+  <insert id="insert" parameterType="org.example.HappyDay_Hotel.entity.UserEntity_manager">
+    INSERT INTO manager (managerid, managername,managerpassword)
+    VALUES (#{managerid}, #{managername},#{managerpassword})
+  </insert>
+
+  <delete id="delete" parameterType="org.example.HappyDay_Hotel.entity.UserEntity_manager">
+    DELETE FROM manager WHERE managerid = #{managerid}
+  </delete>
+
+  <update id="update" parameterType="org.example.HappyDay_Hotel.entity.UserEntity_manager">
+    UPDATE manager
+    SET managername = #{managername},  managerpassword = #{managerpassword}
+    WHERE managerid = #{managerid}
+  </update>
+
+  <select id="select" parameterType="org.example.HappyDay_Hotel.entity.UserEntity_manager" resultType="org.example.HappyDay_Hotel.entity.UserEntity_manager">
+    SELECT * FROM manager WHERE managerid = #{managerid};
+  </select>
+
+</mapper>
