@@ -1,5 +1,4 @@
 import '@styles/globals.css';
-import { Children } from 'react';
 import Nav from '@components/Nav';
 
 // 这个对象用于设置元数据。
@@ -7,24 +6,21 @@ import Nav from '@components/Nav';
 //https://www.youtube.com/watch?v=wm5gMKuwSYk&list=WL&index=12
 
 export const metadata = {
-  title: 'HappyDay Hotel',
-  description: 'Happy & Share ',
+    title: 'HappyDay Hotel', description: 'Happy & Share ',
 };
 
-const RootLayout = ({ children }) => {
-  return (
-    <html lang="en">
-      <body>
-        <div className="main">
-          <div className="gradient" />
-        </div>
-        <main className="app">
-          <Nav />
-          {children}
-        </main>
-      </body>
-    </html>
-  );
+const RootLayout = ({children}) => {
+    return (<html lang="en">
+    <body>
+    <div className="main">
+        <div className="gradient"/>
+    </div>
+    <main className="app">
+        <Nav/>
+        {children}
+    </main>
+    </body>
+    </html>);
 };
 
 export default RootLayout;
