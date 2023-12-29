@@ -1,5 +1,5 @@
 function Form() {
-  return <div>Form</div>;
+  return <></>;
 }
 
 export default Form;

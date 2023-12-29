@@ -39,7 +39,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external"
   }
 }]]></component>
@@ -65,6 +65,9 @@
       <workItem from="1703520483488" duration="117000" />
       <workItem from="1703646218411" duration="681000" />
       <workItem from="1703646909331" duration="3071000" />
+      <workItem from="1703778039507" duration="446000" />
+      <workItem from="1703779849413" duration="1000000" />
+      <workItem from="1703780862231" duration="536000" />
     </task>
     <servers />
   </component>
