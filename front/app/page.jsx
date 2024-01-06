@@ -7,7 +7,7 @@ const Home = () => {
         Happy & Share
         <br className="max-md:hidden" />
         <span className="orange_gradient text-center">
-          HappyDay International Hotel
+          HappyDay International Hotel !
         </span>
       </h1>
       <br />
